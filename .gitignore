@@ -1,16 +1,12 @@
-node_modules
-dist
-build
-.DS_Store
-.env
-*.log
+# Arsip duplikat — isinya sama dengan folder di sebelahnya, tidak perlu di-git.
+/berakhlak-video.zip
+/VIdeo Berakhlak.zip
 
-# Ignore the output video from Git but not videos you import into src/.
-out
-
-# Tooling lokal (bukan bagian video)
-.agents
-skills-lock.json
-
-# Berkas sementara FUSE
-.fuse_hidden*
+# Footage mentah >100MB — DITOLAK GitHub (batas keras 100MB per file).
+# Proxy 1080p dari SEMUA klip ini sudah ada di berakhlak-video/public/clips/,
+# jadi repo tetap bisa render penuh tanpa file-file di bawah ini.
+/VIdeo Berakhlak/20261012_085518.mp4
+/VIdeo Berakhlak/20261012_092132.mp4
+/VIdeo Berakhlak/20261012_092742.mp4
+/VIdeo Berakhlak/20261012_093807.mp4
+/VIdeo Berakhlak/20261012_100345.mp4

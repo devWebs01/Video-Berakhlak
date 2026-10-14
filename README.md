@@ -1,51 +1,36 @@
-# Video BerAKHLAK — Pemerintah Kota Jambi
+# Video-Berakhlak
 
-Video motion-grafis BerAKHLAK (7 nilai dasar ASN) berbasis
-[Remotion](https://www.remotion.dev/) + React, arah seni **Editorial Paper**
-(kanvas kertas hangat, tipografi editorial, footage sebagai jendela geometris,
-motif batik Melayu Jambi). Footage: dokumentasi layanan
-RSUD H. Abdul Manap Kota Jambi.
+Video motion-grafis BerAKHLAK (7 nilai dasar ASN) untuk Pemerintah Kota Jambi —
+dari materi, footage mentah, sampai proyek Remotion yang siap render.
 
-- Landscape `BerAKHLAK` 1920×1080 dan vertikal `BerAKHLAK-Vertical` 1080×1920,
-  30fps, ±5744 frame (±3:11 — durasi mengikuti audio narasi, bukan angka tetap).
-- Narasi TTS perempuan Bahasa Indonesia (Edge TTS `id-ID-GadisNeural`) +
-  subtitle bakar per scene. Tanpa musik latar (hanya 3 SFX sintetis).
+## Isi folder
+
+| Folder / berkas | Keterangan |
+|---|---|
+| `berakhlak-video/` | **Proyek utama** (Remotion + React). Baca `berakhlak-video/README.md` untuk cara jalan. Landscape 1920×1080 + vertikal 1080×1920, 30fps, ±5744 frame (±3:11). |
+| `VIdeo Berakhlak/` | Footage mentah dokumentasi layanan RSUD H. Abdul Manap Kota Jambi (45 klip 4K). |
+| `logo/` | Aset logo (referensi). Logo resmi yang dipakai video ada di `berakhlak-video/public/brand/`. |
+| `Materi Video Berakhlak.md` | Naskah/materi sumber narasi. |
+| `berakhlak-video/out/` | Hasil render lokal (`BerAKHLAK.mp4`) — tidak ikut di-git. |
 
 ## Mulai cepat
 
 ```bash
+cd berakhlak-video
 npm i
 npm run dev        # Remotion Studio
 npm run verify     # eslint + tsc + cek keseimbangan footage
 npx remotion render BerAKHLAK out/berakhlak.mp4
 ```
 
-> Catatan: `remotion.config.ts` otomatis memakai Chrome/Chromium sistem
-> kalau ada (bisa ditimpa via `REMOTION_BROWSER_EXECUTABLE`), karena unduhan
-> Chrome Headless Shell bawaan Remotion gagal di sebagian mesin Linux.
+## Catatan footage
 
-## Alur kerja
+Lima file footage mentah (>100MB per file) **tidak ikut di-git** karena batas
+keras GitHub menolak file >100MB:
 
-| Perintah | Fungsi |
-|---|---|
-| `bash scripts/generate-voiceover.sh` (`npm run voiceover`) | TTS dari `src/data/narration.json` → `public/voiceover/*.mp3` + `*.srt`, lalu menulis ulang `src/data/durations.ts` + `src/data/captions.ts` |
-| `bash scripts/make-proxies.sh <klip…>` | Potong footage 4K sumber menjadi proxy 1080p di `public/clips/` |
-| `node scripts/check-shots.mjs` (`npm run check:shots`) | Pastikan tiap scene punya cukup footage dan angka `seconds` cocok dengan proxy di disk |
-| `bash scripts/generate-sfx.sh` (`npm run sfx`) | Sintesis 3 SFX (whoosh/tick/sting) via ffmpeg |
+- `20261012_085518.mp4`, `20261012_092132.mp4`, `20261012_092742.mp4`,
+  `20261012_093807.mp4`, `20261012_100345.mp4`
 
-Sumber teks narasi: `src/data/narration.json` (satu-satunya sumber — dipakai
-komposisi maupun script TTS). Timeline (`src/timeline.ts`) menurunkan durasi
-scene dari durasi audio terukur, jadi mengubah naskah → jalankan ulang
-`generate-voiceover.sh` dan video menyesuaikan sendiri.
-
-## Struktur
-
-- `src/compositions/` — `Intro`, `Akronim`, `Nilai` (dipakai 7×), `Outro`
-- `src/components/` — `Paper`, `Panel`, `Motif` (8 motif batik line-art),
-  `Broll` (deret klip + alokasi berkapasitas), `Rail`, `Kinetic`, `Logo`,
-  `Subtitles`
-- `src/data/` — `narration.json`, `durations.ts`, `captions.ts`, `values.ts`,
-  `shots.ts` (peta scene→klip + kolom `what` untuk peninjauan)
-- `public/voiceover/`, `public/clips/`, `public/brand/`, `public/sfx/`
-
-Rincian perubahan: `CHANGELOG.md`.
+Ini tidak mengurangi apa pun: proxy 1080p dari **semua** klip tersebut sudah
+ada di `berakhlak-video/public/clips/` dan itulah yang dipakai render.
+File `.zip` di folder ini juga tidak di-git (duplikat dari folder di sebelahnya).
