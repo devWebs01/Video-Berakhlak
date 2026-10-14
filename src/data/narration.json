@@ -1,0 +1,59 @@
+{
+  "voice": "id-ID-GadisNeural",
+  "rate": "+0%",
+  "pitch": "-5Hz",
+  "order": [
+    "intro",
+    "acronym",
+    "value-01",
+    "value-02",
+    "value-03",
+    "value-04",
+    "value-05",
+    "value-06",
+    "value-07",
+    "outro"
+  ],
+  "scenes": {
+    "intro": {
+      "sequence": "Intro",
+      "text": "BerAKHLAK. Inilah nilai dasar yang menjadi identitas seluruh ASN. Sebuah paduan perilaku agar ASN bekerja dengan budaya yang kuat, profesional, dan berintegritas. Mari kita telusuri bersama."
+    },
+    "acronym": {
+      "sequence": "Akronim",
+      "text": "BerAKHLAK adalah akronim dari tujuh nilai utama yang membentuk akar budaya kerja ASN. Berorientasi Pelayanan, Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif."
+    },
+    "value-01": {
+      "sequence": "BerorientasiPelayanan",
+      "text": "Berorientasi Pelayanan. ASN dituntut memahami kebutuhan masyarakat secara proaktif, melayani dengan ramah dan solutif, serta memberikan informasi yang akurat. Pelayanan merata untuk semua, tanpa membeda-bedakan latar belakang."
+    },
+    "value-02": {
+      "sequence": "Akuntabel",
+      "text": "Akuntabel. ASN wajib menjunjung kejujuran, disiplin, dan integritas. Setiap keputusan harus objektif, setiap tugas dipertanggungjawabkan. Tidak ada ruang untuk penyalahgunaan wewenang ataupun gratifikasi."
+    },
+    "value-03": {
+      "sequence": "Kompeten",
+      "text": "Kompeten. Dunia terus berubah. Karena itu ASN harus selalu belajar dan mengembangkan diri, serta membantu rekan kerja tumbuh bersama. Kompetensi yang baik melahirkan kinerja yang berkualitas."
+    },
+    "value-04": {
+      "sequence": "Harmonis",
+      "text": "Harmonis. Setiap ASN harus mampu menjaga hubungan kerja yang sehat, adil, dan penuh rasa hormat. Menghargai perbedaan, menolong sesama, dan menyelesaikan konflik dengan bijak."
+    },
+    "value-05": {
+      "sequence": "Loyal",
+      "text": "Loyal. Kesetiaan ASN tercermin dari sikap memegang teguh Pancasila, Undang-Undang Dasar 1945, serta setia pada NKRI dan pemerintah yang sah. Menjaga nama baik instansi dan melaksanakan keputusan pimpinan dengan penuh tanggung jawab."
+    },
+    "value-06": {
+      "sequence": "Adaptif",
+      "text": "Adaptif. Di era perubahan yang cepat, ASN harus mampu menyesuaikan diri, menguasai teknologi, serta menghadirkan inovasi. Keberanian menyampaikan ide dan solusi adalah kunci agar instansi terus berkembang."
+    },
+    "value-07": {
+      "sequence": "Kolaboratif",
+      "text": "Kolaboratif. Tidak ada keberhasilan tanpa kerja sama. ASN perlu terbuka, memberikan kesempatan bagi semua pihak, serta bersinergi untuk mencapai tujuan bersama. Kolaborasi membangun kekuatan, baik di dalam tim maupun dengan stakeholder."
+    },
+    "outro": {
+      "sequence": "Outro",
+      "text": "Jika kita mampu menghidupi nilai-nilai BerAKHLAK dalam setiap langkah kerja, maka kita bukan sekadar ASN. Kita adalah ASN yang bangga melayani bangsa. Mari kita bersama membangun negeri dengan akhlak, integritas, dan dedikasi."
+    }
+  }
+}
